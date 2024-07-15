@@ -1,0 +1,116 @@
+body {
+  background: #f0f4f8;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-left: 410px;
+}
+
+.app {
+  background: #fff;
+  color: #000;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  border: 2px solid green; /* Green border for the app box */
+}
+
+.title {
+  color: red;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input,
+.todo-form select,
+.todo-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.todo-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todo-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.todo-list th,
+.todo-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.todo-list th {
+  background: #f4f4f4;
+}
+
+.todo-item {
+  animation: slideIn 0.5s ease-in-out;
+  user-select: none; /* Prevent text selection */
+}
+
+.todo-item.completed {
+  background: #e0ffe0;
+}
+
+.todo-item .priority.low {
+  background-color: lightgreen;
+}
+
+.todo-item .priority.medium {
+  background-color: yellow;
+}
+
+.todo-item .priority.high {
+  background-color: lightcoral;
+}
+
+.edit-icon, .check-icon, .delete-icon {
+  cursor: pointer;
+}
+
+.check-icon {
+  color: green;
+}
+
+.delete-icon {
+  color: red;
+}
+
+.edit-icon {
+  color: orange;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
